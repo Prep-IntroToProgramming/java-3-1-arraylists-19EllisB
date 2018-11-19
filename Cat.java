@@ -6,11 +6,11 @@ public class Cat {
     public void setName(String newName) {
         name = newName;
     }
-    
+
     public String getName(){
         return name;
     }
-    
+
     public void setWeight(double newWeight) {
         if (newWeight > 0.0) {
             weight = newWeight;
@@ -18,12 +18,16 @@ public class Cat {
             throw new RuntimeException(); //if weight is invalid.
         }
     }
-    
+
     public double getWeight() {
         return weight;
     }
-    
+
     public void meow() {
-        System.out.println("Meow!");
+        if(Math.random() < 0.25) {
+            System.out.println("*OwO*");
+        } else {
+            System.out.println("Meow!");
+        }
     }
 }
